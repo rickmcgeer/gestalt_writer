@@ -1,8 +1,8 @@
 import os
 import json
-from write_gestalt import write_gestalt as run_write_gestalt
+from github_writer import run_write_gestalt
 
-def write_gestalt(request):
+def main(request):
     try:
         data = request.get_json()
 
