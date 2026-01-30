@@ -4,12 +4,17 @@ from github_writer import run_write_gestalt
 
 def main(request):
     try:
+        if request.method == 'GET':
+            return ('OK', 200)
+        
         data = request.get_json()
 
         # Security check
-        incoming_token = data.get("token")
+        api_key = request.headers.get('Authorization')
         expected_token = os.environ.get("GITHUB_SECRET")
-        if incoming_token != expected_token:
+        expected = f"Bearer {expected_token}"
+        
+        if api_key != expected:
             return ("Unauthorized", 403)
 
         # Extract gestalt data
