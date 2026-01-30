@@ -9,7 +9,7 @@ REPO_NAME = "aiko-chats"
 WORKFLOW_FILENAME = "write_gestalt.yml"
 BRANCH = "main"
 
-def write_gestalt(title, tags, tier, content):
+def run_write_gestalt(title, tags, tier, content):
     api_url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/actions/workflows/{WORKFLOW_FILENAME}/dispatches"
 
     headers = {
