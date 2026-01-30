@@ -4,7 +4,7 @@ import os
 
 # Use environment variable for security
 GITHUB_TOKEN = os.environ.get("GITHUB_PAT")
-REPO_OWNER = "your-username"
+REPO_OWNER = "rickmcgeer"
 REPO_NAME = "aiko-chats"
 WORKFLOW_FILENAME = "write_gestalt.yml"
 BRANCH = "main"
