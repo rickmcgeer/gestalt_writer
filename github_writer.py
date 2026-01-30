@@ -6,7 +6,7 @@ import os
 GITHUB_TOKEN = os.environ.get("GITHUB_PAT")
 REPO_OWNER = "rickmcgeer"
 REPO_NAME = "aiko-chats"
-WORKFLOW_FILENAME = "write_gestalt.yml"
+WORKFLOW_FILENAME = "write_gestalt.yaml"
 BRANCH = "main"
 
 def run_write_gestalt(title, tags, tier, content):
